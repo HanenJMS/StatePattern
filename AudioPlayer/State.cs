@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace StatePattern.AudioPlayer
 {
-    internal class State
+    public abstract class State
     {
+        protected Player player;
+        public void SetPlayer(Player player)
+        {
+            this.player = player;
+        }
+        public abstract void clickLock();
+        public abstract void clickPlay();
+        public abstract void clickNext();
+        public abstract void clickPrevious();
     }
 }

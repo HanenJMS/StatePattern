@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioPlayer\LockedState.cs" />
     <Compile Include="AudioPlayer\Player.cs" />
+    <Compile Include="AudioPlayer\PlayingState.cs" />
+    <Compile Include="AudioPlayer\ReadyState.cs" />
     <Compile Include="AudioPlayer\State.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

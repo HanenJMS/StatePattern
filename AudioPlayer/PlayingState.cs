@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StatePattern.AudioPlayer
+{
+    public class PlayingState : State
+    {
+        public override void clickLock()
+        {
+            Console.WriteLine("Lock Player");
+            player.ChangeState(new LockedState());
+        }
+
+        public override void clickNext()
+        {
+            Console.WriteLine("Player skipping: ");
+            player.fastForward(5);
+        }
+
+        public override void clickPlay()
+        {
+            Console.WriteLine("Pausing");
+            player.StopPlayback();
+            player.ChangeState(new ReadyState());
+        }
+
+        public override void clickPrevious()
+        {
+            Console.WriteLine("Player rewinding: ");
+            player.fastForward(5);
+        }
+    }
+}
