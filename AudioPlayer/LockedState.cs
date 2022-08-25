@@ -8,16 +8,20 @@ namespace StatePattern.AudioPlayer
 {
     public class LockedState : State
     {
+        public LockedState(Player player) : base(player)
+        {
+        }
+
         public override void clickLock()
         {
             Console.WriteLine("Unlock Player");
             if(player.IsPlaying())
             {
-                player.ChangeState(new PlayingState());
+                player.ChangeState(new PlayingState(player));
             }
             else
             {
-                player.ChangeState(new ReadyState());
+                player.ChangeState(new ReadyState(player));
             }
         }
         //nothing should really happen in locked state

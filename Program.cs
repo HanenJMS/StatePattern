@@ -13,7 +13,13 @@ namespace StatePattern
     {
         static void Main(string[] args)
         {
-            var context = new Player(new ReadyState());
+            TestingAudioPlayer();
+
+        }
+
+        private static void TestingAudioPlayer()
+        {
+            var context = new Player();
             //testing ready state transitions
             context.CurrentStateRead();
             context.clickNext();

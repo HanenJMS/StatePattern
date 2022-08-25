@@ -8,10 +8,14 @@ namespace StatePattern.AudioPlayer
 {
     public class PlayingState : State
     {
+        public PlayingState(Player player) : base(player)
+        {
+        }
+
         public override void clickLock()
         {
             Console.WriteLine("Lock Player");
-            player.ChangeState(new LockedState());
+            player.ChangeState(new LockedState(player));
         }
 
         public override void clickNext()
@@ -24,7 +28,7 @@ namespace StatePattern.AudioPlayer
         {
             Console.WriteLine("Pausing");
             player.StopPlayback();
-            player.ChangeState(new ReadyState());
+            player.ChangeState(new ReadyState(player));
         }
 
         public override void clickPrevious()

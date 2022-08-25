@@ -10,15 +10,14 @@ namespace StatePattern.AudioPlayer
     {
         State state;
         bool isPlaying = false;
-        public Player(State state)
+        public Player()
         {
-            ChangeState(state);
+            state = new ReadyState(this);
         }
 
         public void ChangeState(State state)
         {
             this.state = state;
-            state.SetPlayer(this);
         }
         public void clickLock()
         {
