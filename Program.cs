@@ -1,5 +1,6 @@
 ﻿using StatePattern.AudioPlayer;
 using StatePattern.DocumentManager;
+using StatePattern.StateMachine;
 using StatePattern.Structure;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace StatePattern
 {
     public class Program
@@ -16,7 +16,24 @@ namespace StatePattern
         {
             //TestingAudioPlayer();
             //TestingDocumentManager();
+            TEstingStateMachine();
         }
+
+        private static void TEstingStateMachine()
+        {
+            Console.Clear();
+            FSM character = new FSM();
+            character.Attack();
+            character.Attack();
+            character.Follow();
+            character.Cancel();
+            character.Follow();
+            character.Follow();
+            character.Cancel();
+            character.Cancel();
+            Console.ReadLine();
+        }
+
         private static void TestingDocumentManager()
         {
             User admin = new User(true);

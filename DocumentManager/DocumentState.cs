@@ -8,7 +8,7 @@ namespace StatePattern.DocumentManager
 {
     public abstract class DocumentState
     {
-        public Document document;
+        protected Document document;
         public void SetDocument(Document document)
         {
             this.document = document;
