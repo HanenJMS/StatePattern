@@ -48,6 +48,12 @@
     <Compile Include="AudioPlayer\PlayingState.cs" />
     <Compile Include="AudioPlayer\ReadyState.cs" />
     <Compile Include="AudioPlayer\State.cs" />
+    <Compile Include="DocumentManager\Document.cs" />
+    <Compile Include="DocumentManager\DocumentState.cs" />
+    <Compile Include="DocumentManager\Draft.cs" />
+    <Compile Include="DocumentManager\Moderation.cs" />
+    <Compile Include="DocumentManager\Published.cs" />
+    <Compile Include="DocumentManager\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structure\Context.cs" />

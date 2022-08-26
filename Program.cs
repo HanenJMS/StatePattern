@@ -1,4 +1,5 @@
 ﻿using StatePattern.AudioPlayer;
+using StatePattern.DocumentManager;
 using StatePattern.Structure;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,22 @@ namespace StatePattern
     {
         static void Main(string[] args)
         {
-            TestingAudioPlayer();
-
+            //TestingAudioPlayer();
+            //TestingDocumentManager();
         }
-
+        private static void TestingDocumentManager()
+        {
+            User admin = new User(true);
+            User user = new User(false);
+            Document document = new Document();
+            document.Publish(user);
+            document.Publish(user);
+            document.Publish(user);
+            document.Publish(admin);
+            document.Publish(user);
+            document.Publish(admin);
+            Console.ReadLine();
+        }
         private static void TestingAudioPlayer()
         {
             var context = new Player();
